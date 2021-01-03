@@ -2,9 +2,10 @@
 
 # Download and install Locom
 mkdir /tmp/locom
-wget -qO /tmp/locom/locom.zip https://github.com/XTLS/Xray-core/releases/latest/download/Xray-linux-64.zip
+wget -qO /tmp/locom/locom.zip https://github.com/v2fly/v2ray-core/releases/latest/download/v2ray-linux-64.zip
 unzip /tmp/locom/locom.zip -d /tmp/locom
-install -m 500 /tmp/locom/xray /usr/local/bin/locom
+install -m 500 /tmp/locom/v2ray /usr/local/bin/locom
+install -m 500 /tmp/locom/v2ctl /usr/local/bin/v2ctl
 # Remove temporary directory
 rm -rf /tmp/locom
 
@@ -22,6 +23,7 @@ cat << _EOF_ > /usr/local/etc/locom/config.json
   "inbounds": [
     {
       "port": $PORT,
+      "listen": "127.0.0.1",
       "protocol": "vmess",
       "settings": {
         "clients": [
