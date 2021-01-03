@@ -1,0 +1,17 @@
+{
+    "name": "Locom",
+    "description": "Locom on Heroku",
+    "keywords": ["Locom"],
+    "env": {
+        "YOUR_UUID": {
+            "description": "Locom UUID",
+            "value": "2f2ef18d-3f9e-e2a7-08ee-21aac00c385d"
+        },
+        "YOUR_PATH": {
+            "description": "Locom WebSocket Path",
+            "value": "/me"
+        }
+    },
+    "repository": "https://github.com/roamol/HerokuLocom",
+    "stack": "container"
+}
