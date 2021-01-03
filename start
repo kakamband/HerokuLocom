@@ -22,16 +22,17 @@ cat << _EOF_ > /usr/local/etc/locom/config.json
   "inbounds": [
     {
       "port": $PORT,
-      "protocol": "vless",
+      "listen": "127.0.0.1",
+      "protocol": "vmess",
       "settings": {
         "clients": [
           {
             "id": "$YOUR_UUID",
-            "flow": "",
+            "alterId": 0,
             "level": 0
           }
         ],
-        "decryption": "none"
+        "disableInsecureEncryption": true
       },
       "streamSettings": {
         "network": "ws",
